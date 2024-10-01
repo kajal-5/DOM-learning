@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="title" id="t1">Hello World! </h1>
+    <h2 class="title2"> this is test for query selector </h2>
+      
+      <ul class="ulclass">
+        <li>apple</li>
+        <li>banana</li>
+        <li>sugar</li>
+        <li>sweet</li>
+        <li>pea</li>
+        <li>orange</li>
+      </ul>
+      
+      <div class="parent">
+        <div>sunday</div>
+        <div>monday</div>
+        <div>tuesday</div>
+        <div>thursday</div>
+        <div>friday</div>
+      </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children[1].innerHTML);
+
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+
+    const arraydata =Array.from(parent.children);
+    arraydata.forEach(function(l){
+        console.log(l.innerHTML,"l");
+    });
+
+// crete a element/
+
+const div = document.createElement('div');
+div.className="main";
+div.id="mainid";
+div.innerHTML="hi";//override the value but append child aapnd the value
+const text= document.createTextNode("hello this is div tag");
+div.appendChild(text);
+document.body.appendChild(div);
+
+
+</script>
+</html>

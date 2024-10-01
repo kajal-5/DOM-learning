@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="title" id="t1">Hello World! </h1>
+    <h2 class="title2"> this is test for query selector </h2>
+      
+      <ul class="list">
+        <li>apple</li>
+        <li>banana</li>
+        <li>grapes</li>
+        <li>lichi</li>
+        <li>pear</li>
+        <li>orange</li>
+      </ul>
+      <div class="parent">
+        <div>sunday</div>
+        <div>monday</div>
+        <div>tuesday</div>
+        <div>thursday</div>
+        <div>friday</div>
+      </div>
+</body>
+
+<script>
+
+  function addli(langname){
+            const li = document.createElement('li');
+            li.innerHTML=`${langname}`;
+            document.querySelector('.list').appendChild(li)
+
+  }
+        addli("papaya");
+        addli("chikku");
+
+
+  function optili(listname){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(listname));
+            document.querySelector('.list').appendChild(li);
+
+  }
+        optili("kela");
+        optili("muskmellon");
+</script>
+</html>
