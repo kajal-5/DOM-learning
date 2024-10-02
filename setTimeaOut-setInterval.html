@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="heading">wellcome , today we are going to learn </h1>
+    <button id="start"> Start </button>
+    <button id="end"> End </button>
+    <p id="show"></p>
+</body>
+
+<script>
+    const heading = document.querySelector('#heading');
+    const start = document.querySelector('#start');
+    const end = document.querySelector('#end');
+    const show = document.querySelector('#show');
+    
+
+    setTimeout(function(){
+        heading.innerHTML="Today topic , SetTimeOut ";
+    },2000);
+
+    let interval;
+    start.addEventListener('click',function(e){
+            interval = setInterval(function(){
+            let date = new Date();
+            show.innerHTML=date.toLocaleTimeString();
+
+        },100);
+    });
+    end.addEventListener('click',function(e){
+        clearInterval(interval);
+    });
+
+</script>
+</html>
