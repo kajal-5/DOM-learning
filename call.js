@@ -28,4 +28,5 @@ function f1(name,subject){
 
 greet.call(obj);
 let result = new f1('kajal','Math'); 
+
 greet.call(result);
